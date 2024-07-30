@@ -1,7 +1,4 @@
--- replace existing mappings
-vim.api.nvim_set_keymap('n', 'j', 'k', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', 'k', 'j', { noremap = true, silent = true })
-
+-- custom mappings
 vim.api.nvim_set_keymap('n', '<M-Up>', ':m .-2<CR>==', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('i', '<M-Up>', '<Esc>:m .-2<CR>==gi', { noremap = true, silent = true })
 
