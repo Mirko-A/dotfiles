@@ -202,4 +202,11 @@ bindsym $mod+$smod+r restart
 bindsym $mod+$smod+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
 # Set wallpaper
-exec --no-startup-id feh --bg-scale ~/.wallpaper/tower.jpg
+exec --no-startup-id feh --bg-scale ~/.wallpaper/tower.png
+
+# Lock screen
+bindsym $mod+$smod+l exec "i3lock -c 000000"
+
+# Auto lock the screen
+exec "xautolock -detectsleep -time 3 -locker \"i3lock -c 000000\""
+
