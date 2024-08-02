@@ -16,7 +16,5 @@ end
 lspconfig.rust_analyzer.setup({
   on_attach = nvlsp.on_attach,
   capabilities = nvlsp.capabilities,
-  filetypes = {"rust"},
-  root_dir = lspconfig.util.root_pattern("Cargo.toml"),
 })
 
