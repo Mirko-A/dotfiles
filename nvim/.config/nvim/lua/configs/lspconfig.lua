@@ -18,3 +18,4 @@ lspconfig.rust_analyzer.setup({
   capabilities = nvlsp.capabilities,
 })
 
+lspconfig.pyright.setup({})
