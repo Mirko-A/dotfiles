@@ -1,6 +1,6 @@
 // Place your key bindings in this file to override the defaults
 [
-  // NAVIGATION
+  // Navigation
   {
     "key": "ctrl+shift+a",
     "command": "workbench.action.terminal.focusNext",
@@ -25,7 +25,7 @@
     "command": "workbench.action.terminal.kill",
     "when": "terminalFocus"
   },
-  // FILE TREE
+  // File Tree
   {
     "command": "workbench.action.toggleSidebarVisibility",
     "key": "ctrl+e"
@@ -54,5 +54,10 @@
     "command": "deleteFile",
     "key": "d",
     "when": "filesExplorerFocus && !inputFocus"
+  },
+  // Copilot
+  {
+    "key": "ctrl+k ctrl+shift+i",
+    "command": "workbench.panel.chat.view.copilot.focus"
   }
 ]

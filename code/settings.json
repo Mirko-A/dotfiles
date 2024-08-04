@@ -123,11 +123,6 @@
     {
       "before": ["K"],
       "commands": ["editor.action.moveLinesUpAction"]
-    },
-    // toggle comment selection
-    {
-      "before": ["leader", "c"],
-      "commands": ["editor.action.commentLine"]
     }
   ],
   // Copilot
