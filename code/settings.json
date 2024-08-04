@@ -1,0 +1,153 @@
+{
+  // Editor
+  "editor.lineNumbers": "relative",
+  "editor.minimap.enabled": false,
+  "editor.renderWhitespace": "all",
+  "editor.fontFamily": "'FiraCode Nerd Font Mono'",
+  "editor.codeLensFontFamily": "'FiraCode Nerd Font Mono'",
+  "editor.fontLigatures": true,
+  "editor.formatOnSave": true,
+  "editor.fontSize": 16,
+  "explorer.compactFolders": false,
+  "window.zoomLevel": 1,
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.sideBar.location": "right",
+  "workbench.startupEditor": "none",
+  "window.menuBarVisibility": "toggle",
+  // Zen mode
+  "zenMode.fullScreen": false,
+  "zenMode.centerLayout": false,
+  "zenMode.hideStatusBar": false,
+  "zenMode.hideLineNumbers": false,
+  // Theme
+  "workbench.colorTheme": "Catppuccin Mocha",
+  "catppuccin.accentColor": "lavender",
+  "catppuccin.customUIColors": {
+    "mocha": {
+      "statusBar.foreground": "accent"
+    }
+  },
+  // Vim
+  "vim.leader": "<space>",
+  "vim.useSystemClipboard": true,
+  "vim.normalModeKeyBindingsNonRecursive": [
+    // NAVIGATION
+    // switch b/w buffers
+    {
+      "before": ["<S-h>"],
+      "commands": [":bprevious"]
+    },
+    {
+      "before": ["<S-l>"],
+      "commands": [":bnext"]
+    },
+    // splits
+    {
+      "before": ["leader", "v"],
+      "commands": [":vsplit"]
+    },
+    {
+      "before": ["leader", "s"],
+      "commands": [":split"]
+    },
+    // panes
+    {
+      "before": ["leader", "h"],
+      "commands": ["workbench.action.focusLeftGroup"]
+    },
+    {
+      "before": ["leader", "j"],
+      "commands": ["workbench.action.focusBelowGroup"]
+    },
+    {
+      "before": ["leader", "k"],
+      "commands": ["workbench.action.focusAboveGroup"]
+    },
+    {
+      "before": ["leader", "l"],
+      "commands": ["workbench.action.focusRightGroup"]
+    },
+    // NICE TO HAVE
+    {
+      "before": ["leader", "w"],
+      "commands": [":w!"]
+    },
+    {
+      "before": ["leader", "q"],
+      "commands": [":q!"]
+    },
+    {
+      "before": ["leader", "x"],
+      "commands": [":x!"]
+    },
+    {
+      "before": ["[", "d"],
+      "commands": ["editor.action.marker.prev"]
+    },
+    {
+      "before": ["]", "d"],
+      "commands": ["editor.action.marker.next"]
+    },
+    {
+      "before": ["<leader>", "c", "a"],
+      "commands": ["editor.action.quickFix"]
+    },
+    {
+      "before": ["leader", "f"],
+      "commands": ["workbench.action.quickOpen"]
+    },
+    {
+      "before": ["leader", "p"],
+      "commands": ["editor.action.formatDocument"]
+    },
+    {
+      "before": ["g", "h"],
+      "commands": ["editor.action.showDefinitionPreviewHover"]
+    }
+  ],
+  "vim.visualModeKeyBindings": [
+    // Stay in visual mode while indenting
+    {
+      "before": ["<"],
+      "commands": ["editor.action.outdentLines"]
+    },
+    {
+      "before": [">"],
+      "commands": ["editor.action.indentLines"]
+    },
+    // Move selected lines while staying in visual mode
+    {
+      "before": ["J"],
+      "commands": ["editor.action.moveLinesDownAction"]
+    },
+    {
+      "before": ["K"],
+      "commands": ["editor.action.moveLinesUpAction"]
+    },
+    // toggle comment selection
+    {
+      "before": ["leader", "c"],
+      "commands": ["editor.action.commentLine"]
+    }
+  ],
+  // Copilot
+  "github.copilot.editor.enableAutoCompletions": false,
+  // Rust
+  "rust-analyzer.inlayHints.parameterHints.enable": false,
+  // Python
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter"
+  },
+  // json
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  // jsonc
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  // C/C++
+  "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: LLVM, UseTab: Never, IndentWidth: 4, TabWidth: 4, BreakBeforeBraces: Attach, AllowShortIfStatementsOnASingleLine: false, IndentCaseLabels: false, ColumnLimit: 0, AccessModifierOffset: -4 }",
+  // glass-it
+  "glassit.alpha": 230
+}
