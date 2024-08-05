@@ -59,5 +59,9 @@
   {
     "key": "ctrl+k ctrl+shift+i",
     "command": "workbench.panel.chat.view.copilot.focus"
+  },
+  {
+    "key": "ctrl+shift+i",
+    "command": "workbench.action.quickchat.toggle"
   }
 ]
