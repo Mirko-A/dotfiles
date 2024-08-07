@@ -192,6 +192,8 @@ bindsym $mod+f fullscreen toggle
 # Toggle between tiling and floating
 bindsym $mod+$smod+f floating toggle
 
+bindsym $mod+Tab layout toggle tabbed split
+
 # Kill the focused window
 bindsym $mod+$smod+q kill
 
