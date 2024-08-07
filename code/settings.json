@@ -3,7 +3,9 @@
   "editor.lineNumbers": "relative",
   "editor.minimap.enabled": false,
   "editor.renderWhitespace": "all",
+  "editor.inlayHints.enabled": "off",
   "editor.fontFamily": "'FiraCode Nerd Font Mono'",
+  "editor.inlineSuggest.fontFamily": "'FiraCode Nerd Font Mono'",
   "editor.codeLensFontFamily": "'FiraCode Nerd Font Mono'",
   "editor.fontLigatures": true,
   "editor.formatOnSave": true,
@@ -67,6 +69,11 @@
       "before": ["leader", "l"],
       "commands": ["workbench.action.focusRightGroup"]
     },
+    // terminal
+    {
+      "before": ["leader", "t"],
+      "commands": ["workbench.action.terminal.focus"]
+    },
     // NICE TO HAVE
     {
       "before": ["leader", "w"],
@@ -127,8 +134,6 @@
   ],
   // Copilot
   "github.copilot.editor.enableAutoCompletions": false,
-  // Rust
-  "rust-analyzer.inlayHints.parameterHints.enable": false,
   // Python
   "[python]": {
     "editor.defaultFormatter": "ms-python.black-formatter"
