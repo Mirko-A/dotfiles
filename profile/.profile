@@ -27,3 +27,4 @@ if [ -d "$HOME/.local/bin" ] ; then
 fi
 
 export WINIT_UNIX_BACKEND=x11
+. "$HOME/.cargo/env"
