@@ -140,7 +140,7 @@ style = "bg:fourth fg:white"
 format = '[$symbol($version) ]($style)'
 
 [nodejs]
-symbol = " "
+symbol = " "
 version_format = "${raw}"
 style = "bg:fourth fg:white"
 format = '[$symbol($version) ]($style)'
