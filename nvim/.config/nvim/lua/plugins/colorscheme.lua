@@ -1,13 +1,16 @@
 return {
   {
-    "folke/tokyonight.nvim",
+    "rebelot/kanagawa.nvim",
+    lazy = true,
     opts = {
-      lazy = true,
+      theme = "dragon",
       transparent = true,
-      styles = {
-        sidebars = "transparent",
-        floats = "transparent",
-      },
+    },
+  },
+  {
+    "LazyVim/LazyVim",
+    opts = {
+      colorscheme = "kanagawa",
     },
   },
 }
