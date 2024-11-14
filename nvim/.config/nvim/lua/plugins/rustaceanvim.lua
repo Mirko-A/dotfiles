@@ -28,7 +28,8 @@ return {
             procMacro = {
               enable = true,
               ignored = {
-                -- ["async-trait"] = { "async_trait" },
+                -- Removed `async_trait` for now, can be brought back if needed.
+                ["async-trait"] = {},
                 ["napi-derive"] = { "napi" },
                 ["async-recursion"] = { "async_recursion" },
               },
