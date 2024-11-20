@@ -25,6 +25,11 @@ return {
             },
             -- Add clippy lints for Rust.
             checkOnSave = true,
+            -- Disable inlay hints
+            inlayHints = {
+              typeHints = false,
+              parameterHints = false,
+            },
             procMacro = {
               enable = true,
               ignored = {
