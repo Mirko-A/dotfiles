@@ -61,7 +61,7 @@ return {
             "--header-insertion=iwyu",
             "--completion-style=detailed",
             "--function-arg-placeholders",
-            "--fallback-style=webkit",
+            "--fallback-style=WebKit",
           },
           init_options = {
             usePlaceholders = true,
