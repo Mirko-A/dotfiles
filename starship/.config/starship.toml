@@ -1,8 +1,6 @@
 [battery]
 disabled = true
 
-[cmd_duration]
-
 [directory]
 truncation_symbol = "--/"
 truncate_to_repo = true
@@ -14,20 +12,6 @@ read_only = "  "
 "Music" = "  "
 "Pictures" = "  "
 
-[git_branch]
-
-[git_commit]
-disabled = false
-commit_hash_length = 4
-tag_disabled = false
-
-[git_state]
-disabled = true
-
-[hostname]
-
-[jobs]
-
 [kubernetes]
 symbol = "⎈ "
 disabled = true
@@ -36,6 +20,7 @@ disabled = true
 symbol = " "
 style = "bg:fifth fg:white"
 format = '[$symbol $context ]($style)'
+
 [line_break]
 disabled = false
 
