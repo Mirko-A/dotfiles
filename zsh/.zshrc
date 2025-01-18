@@ -117,10 +117,18 @@ fi
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# list
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
+
+# vim
 alias vi='nvim'
+
+# memory
+alias df='df -T'
+alias du10='du -h . | sort -h -r | head -n 10'
 
 source <(fzf --zsh)
 eval "$(zoxide init zsh)"
