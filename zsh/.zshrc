@@ -123,6 +123,19 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 
+# tree
+alias tree="tree -L 3 -a -I '.git' --charset -X "
+alias dtree="tree -L 3 -a d -I '.git' --charset -X "
+
+# Next level ls
+alias ee='eza --long --color=always --icons=always --no-user'
+
+# git
+alias ga='git add .'
+alias gs='git status -sb'
+alias gc='git commit -m'
+alias glog='git log --oneline --all'
+
 # vim
 alias vi='nvim'
 
