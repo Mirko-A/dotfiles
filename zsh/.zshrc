@@ -70,7 +70,9 @@ ZSH_THEME=""
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting colored-man-pages)
+plugins=(git eza zsh-autosuggestions zsh-syntax-highlighting colored-man-pages)
+
+zstyle ':omz:plugins:eza' 'icons' yes
 
 source $ZSH/oh-my-zsh.sh
 
@@ -118,23 +120,9 @@ fi
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# list
-alias ll='ls -alF'
-alias la='ls -A'
-alias l='ls -CF'
-
 # tree
 alias tree="tree -L 3 -a -I '.git' --charset -X "
 alias dtree="tree -L 3 -a d -I '.git' --charset -X "
-
-# Next level ls
-alias ee='eza --long --color=always --icons=always --no-user'
-
-# git
-alias ga='git add .'
-alias gs='git status -sb'
-alias gc='git commit -m'
-alias glog='git log --oneline --all'
 
 # vim
 alias vi='nvim'
