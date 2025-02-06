@@ -18,6 +18,16 @@ local filetypes = {
   "html",
 }
 
+local dictionary = {
+  -- Code comments
+  "TODO",
+  "FIXME",
+  "BUG",
+  "NOTE",
+  -- Other
+  "Starknet",
+}
+
 return {
   {
     "neovim/nvim-lspconfig",
@@ -33,6 +43,9 @@ return {
                 checkFrequency = "save",
                 enablePickyRules = true,
                 motherTongue = "en-US",
+              },
+              dictionary = {
+                ["en-US"] = dictionary,
               },
             },
           },
