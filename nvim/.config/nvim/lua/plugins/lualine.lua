@@ -40,7 +40,6 @@ return {
               info = icons.diagnostics.Info,
             },
           },
-          { "filetype", icon_only = true, separator = "", padding = { left = 1, right = 0 } },
           { "filename", path = 4 },
         },
         lualine_x = {
@@ -88,6 +87,8 @@ return {
           },
         },
         lualine_y = {
+          { "filetype", separator = "", padding = { left = 1, right = 0 } },
+          { "encoding" },
           { "progress", padding = { left = 1, right = 1 } },
         },
       },
