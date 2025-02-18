@@ -3,7 +3,7 @@
 -- Add any additional autocmds here
 
 vim.api.nvim_create_autocmd({ "FileType" }, {
-  pattern = { "javascript", "typescript" },
+  pattern = { "lua", "javascript", "typescript", "javascriptreact", "typescriptreact" },
   callback = function()
     vim.bo.shiftwidth = 2
     vim.bo.tabstop = 2
