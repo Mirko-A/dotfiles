@@ -39,8 +39,8 @@ return {
             ltex = {
               enabled = filetypes,
               language = "en-US",
+              checkFrequency = "save",
               additionalRules = {
-                checkFrequency = "save",
                 enablePickyRules = true,
                 motherTongue = "en-US",
               },
