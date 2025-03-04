@@ -84,23 +84,23 @@ source $ZSH/oh-my-zsh.sh
 # export LANG=en_US.UTF-8
 
 # set PATH so it includes user's private bin if it exists
-if [ -d "$HOME/bin" ]; then
+if [ -d "$HOME/bin" ] && [[ ":$PATH:" != *":$HOME/bin:"* ]]; then
   PATH="$HOME/bin:$PATH"
 fi
 
 # set PATH so it includes user's private bin if it exists
-if [ -d "$HOME/.local/bin" ]; then
+if [ -d "$HOME/.local/bin" ] && [[ ":$PATH:" != *":$HOME/.local/bin:"* ]]; then
   PATH="$HOME/.local/bin:$PATH"
 fi
 
 # set PATH so it includes the cargo directory if it exists
-if [ -d "$HOME/.cargo/bin" ]; then
+if [ -d "$HOME/.cargo/bin" ] && [[ ":$PATH:" != *":$HOME/.cargo/bin:"* ]]; then
   PATH="$HOME/.cargo/bin:$PATH"
 fi
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='vim'
+  export EDITOR='nvim'
 else
   export EDITOR='nvim'
 fi
@@ -130,6 +130,9 @@ alias vi='nvim'
 # memory
 alias df='df -T'
 alias du10='du -h . | sort -h -r | head -n 10'
+
+# git
+alias lg='lazygit'
 
 source <(fzf --zsh)
 eval "$(zoxide init zsh)"
