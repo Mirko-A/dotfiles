@@ -1,17 +1,14 @@
 return {
   "zbirenbaum/copilot.lua",
-  cmd = "Copilot",
-  build = ":Copilot auth",
   opts = {
     suggestion = {
       enabled = true,
-      auto_trigger = false,
       hide_during_completion = true,
-      debounce = 75,
+      auto_trigger = false,
       keymap = {
         accept = "<M-l>",
         accept_word = false,
-        accept_line = false,
+        accept_line = true,
         next = "<M-]>",
         prev = "<M-[>",
         dismiss = "<C-]>",
@@ -20,7 +17,6 @@ return {
     panel = { enabled = false },
     filetypes = {
       yaml = false,
-      markdown = false,
       help = false,
       gitcommit = false,
       gitrebase = false,
