@@ -13,4 +13,5 @@ vim.g.snacks_animate = false
 vim.g.minipairs_disable = true
 
 -- Whitespace
+vim.opt.list = false
 vim.opt.listchars = { eol = "¬", tab = ">·", extends = ">", precedes = "<", lead = "·", trail = "·" }
