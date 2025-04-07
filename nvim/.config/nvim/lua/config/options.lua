@@ -10,7 +10,6 @@ vim.o.softtabstop = 4
 
 -- Disable animations
 vim.g.snacks_animate = false
-vim.g.minipairs_disable = true
 
 -- Whitespace
 vim.opt.list = false
