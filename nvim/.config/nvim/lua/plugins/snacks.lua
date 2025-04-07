@@ -4,6 +4,9 @@ return {
     explorer = {
       replace_netrw = true,
     },
+    lazygit = {
+      configure = false,
+    },
     picker = {
       sources = {
         explorer = {
