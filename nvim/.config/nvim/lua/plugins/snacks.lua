@@ -11,7 +11,6 @@ return {
       sources = {
         explorer = {
           layout = { layout = { position = "right" } },
-          follow_file = false,
           jump = { close = false },
         },
       },
