@@ -6,7 +6,6 @@ return {
       background = {
         dark = "dragon",
       },
-      transparent = true,
     },
   },
   {
