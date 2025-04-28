@@ -2,7 +2,9 @@
 -- Default options that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/options.lua
 -- Add any additional options here
 
+-- Screen
 vim.opt.colorcolumn = "120"
+vim.o.scrolloff = 12
 
 -- Indentation
 vim.o.expandtab = true
@@ -12,6 +14,9 @@ vim.o.softtabstop = 4
 
 -- Disable animations
 vim.g.snacks_animate = false
+
+-- Disable copilot as completion source
+vim.g.ai_cmp = false
 
 -- Whitespace
 vim.opt.list = false
