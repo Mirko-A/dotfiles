@@ -1,56 +1,58 @@
-local filetypes = {
-  "bib",
-  "gitcommit",
-  "markdown",
-  "org",
-  "plaintex",
-  "rst",
-  "rnoweb",
-  "tex",
-  "pandoc",
-  "rust",
-  "javascript",
-  "typescript",
-  "javascriptreact",
-  "typescriptreact",
-  "lua",
-  "python",
-  "html",
-}
+return {}
 
-local dictionary = {
-  -- Code comments
-  "TODO",
-  "FIXME",
-  "BUG",
-  "NOTE",
-  -- Other
-  "Starknet",
-}
-
-return {
-  {
-    "neovim/nvim-lspconfig",
-    opts = {
-      servers = {
-        ltex = {
-          filetypes = filetypes,
-          settings = {
-            ltex = {
-              enabled = filetypes,
-              language = "en-US",
-              checkFrequency = "save",
-              additionalRules = {
-                enablePickyRules = true,
-                motherTongue = "en-US",
-              },
-              dictionary = {
-                ["en-US"] = dictionary,
-              },
-            },
-          },
-        },
-      },
-    },
-  },
-}
+-- local filetypes = {
+--   "bib",
+--   "gitcommit",
+--   "markdown",
+--   "org",
+--   "plaintex",
+--   "rst",
+--   "rnoweb",
+--   "tex",
+--   "pandoc",
+--   "rust",
+--   "javascript",
+--   "typescript",
+--   "javascriptreact",
+--   "typescriptreact",
+--   "lua",
+--   "python",
+--   "html",
+-- }
+--
+-- local dictionary = {
+--   -- Code comments
+--   "TODO",
+--   "FIXME",
+--   "BUG",
+--   "NOTE",
+--   -- Other
+--   "Starknet",
+-- }
+--
+-- return {
+--   {
+--     "neovim/nvim-lspconfig",
+--     opts = {
+--       servers = {
+--         ltex = {
+--           filetypes = filetypes,
+--           settings = {
+--             ltex = {
+--               enabled = filetypes,
+--               language = "en-US",
+--               checkFrequency = "save",
+--               additionalRules = {
+--                 enablePickyRules = true,
+--                 motherTongue = "en-US",
+--               },
+--               dictionary = {
+--                 ["en-US"] = dictionary,
+--               },
+--             },
+--           },
+--         },
+--       },
+--     },
+--   },
+-- }
