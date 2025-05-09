@@ -21,7 +21,7 @@ return {
               enable = true,
               ignored = {
                 -- Removed `async_trait` for now, can be brought back if needed.
-                ["async-trait"] = {},
+                -- ["async-trait"] = { "async-trait" },
                 ["napi-derive"] = { "napi" },
                 ["async-recursion"] = { "async_recursion" },
               },
