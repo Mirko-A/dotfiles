@@ -124,6 +124,10 @@ alias du10='du -h . | sort -h -r | head -n 10'
 # git
 alias lg='lazygit'
 
+# rsync
+alias rsync-backup='sudo rsync -aAX --delete --info=progress2 / /run/media/mire/Transcend/arch-bkp \
+--exclude={"/dev/*","/proc/*","/sys/*","/tmp/*","/run/*","/mnt/*","/media/*","/lost+found","/swapfile","/home/mire/Documents/dev/work/pathfinder","/home/mire/Documents/dev/work/foundation"}'
+
 source <(fzf --zsh)
 eval "$(zoxide init zsh)"
 eval "$(starship init zsh)"
