@@ -136,8 +136,8 @@ alias rsync-backup='sudo rsync -avAX --delete / /run/media/mire/Transcend/arch-b
 "/media/*",\
 "/lost+found",\
 "/swapfile",\
+"/home/mire/.cargo/registry/*",\
 "/home/mire/Documents/dev/work/main/*",\
-"/home/mire/.cargo/registry/*"\
 }'
 
 source <(fzf --zsh)
