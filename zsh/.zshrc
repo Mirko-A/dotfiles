@@ -110,21 +110,18 @@ eval "$(pyenv init - bash)"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# tree
-alias tree="tree -L 3 -a -I '.git' --charset -X "
-alias dtree="tree -L 3 -a d -I '.git' --charset -X "
-
 # vim
 alias vi='nvim'
 
 # memory
 alias df='df -T'
-alias du10='du -h . | sort -h -r | head -n 10'
 
 # git
 alias lg='lazygit'
 
-# rsync
+# utility
+alias tree="tree -L 3 -a -I '.git' --charset -X"
+alias dtree="tree -L 3 -a d -I '.git' --charset -X"
 alias rsync-backup='sudo rsync -avAX --delete / /run/media/mire/Transcend/arch-bkp \
 --exclude={\
 "/dev/*",\
