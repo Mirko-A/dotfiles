@@ -95,10 +95,15 @@ export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init - bash)"
 
-# A QoL function that also fixes Zsh not tab-completing paths with `uv`.
-function py() {
-    uv run $1
+# Fix completions for uv run to autocomplete .py files
+_uv_run_mod() {
+    if [[ "$words[2]" == "run" && "$words[CURRENT]" != -* ]]; then
+        _arguments '*:filename:_files -g "*.py"'
+    else
+        _uv "$@"
+    fi
 }
+compdef _uv_run_mod uv
 
 # pnpm
 export PNPM_HOME="/home/mire/.local/share/pnpm"
