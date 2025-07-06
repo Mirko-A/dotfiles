@@ -95,6 +95,11 @@ export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init - bash)"
 
+# A QoL function that also fixes Zsh not tab-completing paths with `uv`.
+function py() {
+    uv run $1
+}
+
 # pnpm
 export PNPM_HOME="/home/mire/.local/share/pnpm"
 case ":$PATH:" in
