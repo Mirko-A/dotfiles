@@ -133,7 +133,10 @@ alias vi='nvim'
 
 # memory
 alias df='df -T'
-alias du10='du -hs | sort -hr | head -n 10'
+du10() {
+  local dir="${1:-.}"
+  du -hs "$dir"/* 2>/dev/null | sort -hr | head -n 10
+}
 
 # git
 alias lg='lazygit'
