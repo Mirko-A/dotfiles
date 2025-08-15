@@ -144,21 +144,43 @@ alias lg='lazygit'
 # utility
 alias tree="tree -L 3 -a -I '.git' --charset -X"
 alias dtree="tree -L 3 -a d -I '.git' --charset -X"
-alias rsync-backup='sudo rsync -avAX --delete / /run/media/mire/Transcend/arch-bkp \
---exclude={\
-"/dev/*",\
-"/proc/*",\
-"/sys/*",\
-"/tmp/*",\
-"/run/*",\
-"/mnt/*",\
-"/media/*",\
-"/lost+found",\
-"/swapfile",\
-"/home/mire/.cargo/registry/*",\
-"/home/mire/Documents/dev/work/main/*",\
-"/home/mire/Documents/dev/work/aux/pathfinder/snapshots/*",\
-}'
+rsync_() {
+  local mode="$1"
+  local src dest
+  local excludes=(
+    "/dev/*"
+    "/proc/*"
+    "/sys/*"
+    "/tmp/*"
+    "/run/*"
+    "/mnt/*"
+    "/media/*"
+    "/lost+found"
+    "/swapfile"
+    "/home/mire/.cargo/registry/*"
+    "/home/mire/Documents/dev/work/main/*"
+    "/home/mire/Documents/dev/work/aux/pathfinder/snapshots/*"
+  )
+  local exclude_args=()
+  for ex in "${excludes[@]}"; do
+    exclude_args+=(--exclude="$ex")
+  done
+
+  if [[ "$mode" == "backup" ]]; then
+    src="/"
+    dest="/run/media/mire/Transcend/arch-bkp/"
+  elif [[ "$mode" == "restore" ]]; then
+    src="/run/media/mire/Transcend/arch-bkp/"
+    dest="/"
+  else
+    echo "Usage: rsync_ [backup|restore]"
+    return 1
+  fi
+
+  sudo rsync -avAX --delete "${exclude_args[@]}" "$src" "$dest"
+}
+alias rsync-backup='rsync_ backup'
+alias rsync-restore='rsync_ restore'
 
 source <(fzf --zsh)
 eval "$(zoxide init zsh)"
