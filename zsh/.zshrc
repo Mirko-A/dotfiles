@@ -128,6 +128,10 @@ esac
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# zsh
+alias zshconfig='source ~/.zshrc'
+alias ohmyzsh='source ~/.oh-my-zsh'
+
 # vim
 alias vi='nvim'
 
