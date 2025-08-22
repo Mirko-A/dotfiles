@@ -8,5 +8,10 @@ return {
         prev = "<M-p>",
       },
     },
+    filetypes = {
+      markdown = true,
+      yaml = true,
+      help = true,
+    },
   },
 }
