@@ -152,6 +152,7 @@ rsync_() {
   local mode="$1"
   local src dest
   local excludes=(
+    # System files
     "/dev/*"
     "/proc/*"
     "/sys/*"
@@ -161,7 +162,10 @@ rsync_() {
     "/media/*"
     "/lost+found"
     "/swapfile"
+    # Package manager files
     "/home/mire/.cargo/registry/*"
+    "/home/mire/go/pkg/mod/*"
+    # Large user files
     "/home/mire/Documents/dev/work/main/*"
     "/home/mire/Documents/dev/work/aux/pathfinder/snapshots/*"
   )
