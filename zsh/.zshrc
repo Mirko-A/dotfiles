@@ -1,7 +1,3 @@
-[ -d $HOME/bin ] && export PATH=$HOME/bin:$PATH
-[ -d $HOME/.local/bin ] && export PATH=$HOME/.local/bin:$PATH
-[ -d $HOME/.cargo/bin ] && export PATH=$HOME/.cargo/bin:$PATH
-
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
@@ -81,6 +77,9 @@ source $ZSH/oh-my-zsh.sh
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
+# Neovim as manpager
+export MANPAGER="nvim +Man!"
+
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
@@ -111,7 +110,6 @@ case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
-# pnpm end
 
 # Compilation flags
 # export ARCHFLAGS="-arch $(uname -m)"
