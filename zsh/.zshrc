@@ -130,9 +130,6 @@ esac
 alias zshconfig='source ~/.zshrc'
 alias ohmyzsh='source ~/.oh-my-zsh'
 
-# vim
-alias vi='nvim'
-
 # memory
 alias df='df -T'
 du10() {
