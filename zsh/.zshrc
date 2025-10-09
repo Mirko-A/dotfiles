@@ -162,7 +162,6 @@ rsync_() {
     "/home/mire/go/pkg/mod/*"
     # Large user files
     "/home/mire/Documents/dev/work/main/*"
-    "/home/mire/Documents/dev/work/aux/pathfinder/snapshots/*"
   )
   local exclude_args=()
   for ex in "${excludes[@]}"; do
