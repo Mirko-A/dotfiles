@@ -77,6 +77,9 @@ source $ZSH/oh-my-zsh.sh
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
+# Enable command auto-completion
+autoload -Uz compinit && compinit
+
 # Neovim as manpager
 export MANPAGER="nvim +Man!"
 
@@ -183,6 +186,54 @@ rsync_() {
 }
 alias rsync-backup='rsync_ backup'
 alias rsync-restore='rsync_ restore'
+
+# Alias for running starkup installer
+alias starkup="curl --proto '=https' --tlsv1.2 -sSf https://sh.starkup.sh | sh -s --"
+
+# BEGIN ASDF COMPLETIONS
+_asdf() {
+  if ! asdf completion zsh >/dev/null 2>&1; then
+    return 0
+  fi
+  eval "$(asdf completion zsh)"
+  _asdf "$@"
+}
+
+compdef _asdf asdf
+# END ASDF COMPLETIONS
+
+# BEGIN SCARB COMPLETIONS
+_scarb() {
+  if ! scarb completions zsh >/dev/null 2>&1; then
+    return 0
+  fi
+  eval "$(scarb completions zsh)"
+  _scarb "$@"
+}
+
+compdef _scarb scarb
+# END SCARB COMPLETIONS
+
+# BEGIN FOUNDRY COMPLETIONS
+_snforge() {
+  if ! snforge completions zsh >/dev/null 2>&1; then
+    return 0
+  fi
+  eval "$(snforge completions zsh)"
+  _snforge "$@"
+}
+
+_sncast() {
+  if ! sncast completions zsh >/dev/null 2>&1; then
+    return 0
+  fi
+  eval "$(sncast completions zsh)"
+  _sncast "$@"
+}
+
+compdef _snforge snforge
+compdef _sncast sncast
+# END FOUNDRY COMPLETIONS
 
 source <(fzf --zsh)
 eval "$(zoxide init zsh)"
