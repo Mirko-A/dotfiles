@@ -1,6 +1,15 @@
 [battery]
 disabled = true
 
+[time]
+disabled = true
+
+[username]
+disabled = false
+
+[line_break]
+disabled = false
+
 [directory]
 truncation_symbol = "--/"
 truncate_to_repo = true
@@ -21,9 +30,6 @@ symbol = " "
 style = "bg:fifth fg:white"
 format = '[$symbol $context ]($style)'
 
-[line_break]
-disabled = false
-
 [c]
 symbol = " "
 version_format = "${raw}"
@@ -41,11 +47,11 @@ symbol = " "
 version_format = "${raw}"
 style = "bg:fourth fg:white"
 python_binary = [
-  "./venv/bin/python",
-  "./env/Scripts/python",
-  "python",
-  "python3",
-  "python2",
+    "./venv/bin/python",
+    "./env/Scripts/python",
+    "python",
+    "python3",
+    "python2",
 ]
 format = '[$symbol($version)]($style)[ (\($virtualenv\)) ](bg:fourth fg:white)'
 
@@ -66,9 +72,3 @@ symbol = " "
 version_format = "${raw}"
 style = "bg:fourth fg:white"
 format = '[$symbol($version) ]($style)'
-
-[time]
-disabled = true
-
-[username]
-disabled = false
