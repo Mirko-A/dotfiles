@@ -11,6 +11,3 @@ bold = { family = "FiraCode Nerd Font Mono", style = "Bold" }
 italic = { family = "FiraCode Nerd Font Mono", style = "Italic" }
 
 size = 16.0
-
-[keyboard]
-bindings = [{ key = "N", mods = "Control|Shift", action = "CreateNewWindow" }]
