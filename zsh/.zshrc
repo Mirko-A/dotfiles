@@ -144,8 +144,6 @@ du10() {
 alias lg='lazygit'
 
 # utility
-alias tree="tree -L 3 -a -I '.git' --charset -X"
-alias dtree="tree -L 3 -a d -I '.git' --charset -X"
 rsync_() {
   local mode="$1"
   local src dest
