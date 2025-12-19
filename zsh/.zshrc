@@ -133,13 +133,6 @@ esac
 alias zshconfig='source ~/.zshrc'
 alias ohmyzsh='source ~/.oh-my-zsh'
 
-# memory
-alias df='df -T'
-du10() {
-  local dir="${1:-.}"
-  du -hs "$dir"/* 2>/dev/null | sort -hr | head -n 10
-}
-
 # git
 alias lg='lazygit'
 
