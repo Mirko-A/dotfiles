@@ -97,16 +97,6 @@ export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init - bash)"
 
-# Fix completions for uv run to autocomplete .py files
-_uv_run_mod() {
-    if [[ "$words[2]" == "run" && "$words[CURRENT]" != -* ]]; then
-        _arguments '*:filename:_files -g "*.py"'
-    else
-        _uv "$@"
-    fi
-}
-compdef _uv_run_mod uv
-
 # pnpm
 export PNPM_HOME="/home/mire/.local/share/pnpm"
 case ":$PATH:" in
@@ -135,48 +125,6 @@ alias ohmyzsh='source ~/.oh-my-zsh'
 
 # git
 alias lg='lazygit'
-
-# utility
-rsync_() {
-  local mode="$1"
-  local src dest
-  local excludes=(
-    # System files
-    "/dev/*"
-    "/proc/*"
-    "/sys/*"
-    "/tmp/*"
-    "/run/*"
-    "/mnt/*"
-    "/media/*"
-    "/lost+found"
-    "/swapfile"
-    # Package manager files
-    "/home/mire/.cargo/registry/*"
-    "/home/mire/go/pkg/mod/*"
-    # Large user files
-    "/home/mire/Documents/dev/work/main/*"
-  )
-  local exclude_args=()
-  for ex in "${excludes[@]}"; do
-    exclude_args+=(--exclude="$ex")
-  done
-
-  if [[ "$mode" == "backup" ]]; then
-    src="/"
-    dest="/run/media/mire/Transcend/arch-bkp/"
-  elif [[ "$mode" == "restore" ]]; then
-    src="/run/media/mire/Transcend/arch-bkp/"
-    dest="/"
-  else
-    echo "Usage: rsync_ [backup|restore]"
-    return 1
-  fi
-
-  sudo rsync -avAX --delete "${exclude_args[@]}" "$src" "$dest"
-}
-alias rsync-backup='rsync_ backup'
-alias rsync-restore='rsync_ restore'
 
 # Alias for running starkup installer
 alias starkup="curl --proto '=https' --tlsv1.2 -sSf https://sh.starkup.sh | sh -s --"
