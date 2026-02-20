@@ -1,14 +1,14 @@
 return {
   "mrcjkb/rustaceanvim",
   opts = function(_, opts)
-    local rustAnalyzerSettings = opts.server.default_settings["rust-analyzer"]
-    rustAnalyzerSettings.cargo.allFeatures = false
-    rustAnalyzerSettings.cargo.features = {}
-    rustAnalyzerSettings.inlayHints = {
+    local globalRustAnalyzerSettings = opts.server.default_settings["rust-analyzer"]
+    globalRustAnalyzerSettings.cargo.allFeatures = false
+    globalRustAnalyzerSettings.cargo.features = {}
+    globalRustAnalyzerSettings.inlayHints = {
       typeHints = false,
       parameterHints = false,
     }
-    rustAnalyzerSettings.rustfmt = {
+    globalRustAnalyzerSettings.rustfmt = {
       extraArgs = { "+nightly" },
     }
   end,
