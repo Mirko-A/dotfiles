@@ -123,9 +123,6 @@ esac
 alias zshconfig='source ~/.zshrc'
 alias ohmyzsh='source ~/.oh-my-zsh'
 
-# git
-alias lg='lazygit'
-
 # Alias for running starkup installer
 alias starkup="curl --proto '=https' --tlsv1.2 -sSf https://sh.starkup.sh | sh -s --"
 
