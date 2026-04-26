@@ -3,7 +3,7 @@
 -- Add any additional options here
 
 -- Screen
-vim.opt.colorcolumn = "120"
+vim.opt.colorcolumn = "80"
 vim.o.scrolloff = 12
 
 -- Indentation
