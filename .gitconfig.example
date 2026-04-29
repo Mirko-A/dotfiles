@@ -1,0 +1,22 @@
+[user]
+	email = <email>
+	name = <name>
+
+[init]
+	defaultBranch = main
+
+[merge]
+    tool = vimdiff
+
+[mergetool "vimdiff"]
+    path = nvim
+    cmd = nvim -d $LOCAL $REMOTE $MERGED -c '$wincmd w' -c 'wincmd J'
+
+[sendemail]
+    smtpuser = <email>
+	smtpPass = <pass>
+    smtpserver = smtp.gmail.com
+    smtpencryption = ssl
+    smtpserverport = 465
+    confirm = always
+    annotate = true
