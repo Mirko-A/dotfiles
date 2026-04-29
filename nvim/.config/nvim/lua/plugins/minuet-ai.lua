@@ -22,7 +22,7 @@ return {
     provider = "openai_fim_compatible",
     -- Recommended for local model for resource saving.
     n_completions = 1,
-    context_window = 512,
+    context_window = 2048,
     provider_options = {
       openai_fim_compatible = {
         api_key = "TERM",
@@ -32,7 +32,7 @@ return {
         -- post-launch.
         model = "PLACEHOLDER",
         optional = {
-          max_tokens = 56,
+          max_tokens = 128,
           top_p = 0.9,
         },
         -- llama.cpp does not support the `suffix` option in FIM completion.
