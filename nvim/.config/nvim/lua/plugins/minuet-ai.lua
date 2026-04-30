@@ -22,18 +22,16 @@ return {
     provider = "openai_fim_compatible",
     -- Recommended for local model for resource saving.
     n_completions = 1,
-    context_window = 4096,
+    context_window = 16384,
     provider_options = {
       openai_fim_compatible = {
         api_key = "TERM",
         name = "llama.cpp",
         end_point = "http://localhost:11434/v1/completions",
-        -- The model is set by the llama-cpp server and cannot be altered
-        -- post-launch.
-        model = "PLACEHOLDER",
         optional = {
           max_tokens = 128,
         },
+        model = "unsloth/Qwen3-Coder-Next",
         -- llama.cpp does not support the `suffix` option in FIM completion.
         -- Therefore, we must disable it and manually populate the special
         -- tokens required for FIM completion.
