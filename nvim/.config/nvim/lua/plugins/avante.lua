@@ -7,7 +7,7 @@ return {
         __inherited_from = "openai",
         endpoint = "http://localhost:11434/v1",
         api_key_name = "",
-        model = "unsloth/Qwen3.5-35B-A3B-GGUF:UD-Q4_K_XL",
+        model = "unsloth/Qwen3-Coder-Next",
         timeout = 30000,
       },
     },
