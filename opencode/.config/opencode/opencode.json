@@ -8,10 +8,10 @@
         "baseURL": "http://127.0.0.1:11434/v1"
       },
       "models": {
-        "qwen3.6-35b-a3b": {
-          "name": "Qwen3 3.6 35B (local)",
+        "qwen3-coder-next": {
+          "name": "Qwen3 Coder Next (local)",
           "limit": {
-            "context": 128000,
+            "context": 262144,
             "output": 65536
           }
         }
