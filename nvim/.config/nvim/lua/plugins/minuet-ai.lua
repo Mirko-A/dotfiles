@@ -21,8 +21,8 @@ return {
     -- ////////// Local llama.cpp provider settings.
     provider = "openai_fim_compatible",
     -- Recommended for local model for resource saving.
-    n_completions = 2,
-    context_window = 16384,
+    n_completions = 1,
+    context_window = 1024,
     provider_options = {
       openai_fim_compatible = {
         api_key = "TERM",
