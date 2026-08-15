@@ -29,7 +29,7 @@ return {
     picker = {
       sources = {
         explorer = {
-          layout = { layout = { position = "right" } },
+          layout = { layout = { position = "left" } },
           jump = { close = false },
         },
       },
