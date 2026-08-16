@@ -3,10 +3,11 @@
 [ -d $HOME/.local/bin ] && export PATH="$PATH:$HOME/.local/bin"
 
 # package specific
-[ -d $HOME/.cargo/bin ] && export PATH="$PATH:$HOME/.cargo/bin"
-
-[ -d $HOME/.foundry/bin ] && export PATH="$PATH:$HOME/.foundry/bin"
+[ -f $HOME/.cargo/env ] && . "$HOME/.cargo/env"
 
 [ -d $HOME/go/bin ] && export PATH="$PATH:$HOME/go/bin"
 
-. "$HOME/.cargo/env"
+[ -d $HOME/.foundry/bin ] && export PATH="$PATH:$HOME/.foundry/bin"
+
+# secrets (untracked)
+[ -f $HOME/.secrets ] && . "$HOME/.secrets"
