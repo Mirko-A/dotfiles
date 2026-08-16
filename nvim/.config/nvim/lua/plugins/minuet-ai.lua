@@ -32,9 +32,6 @@ return {
       -- Google Gemini configuration.
       gemini = {
         model = "gemini-2.0-flash",
-        system = "see [Prompt] section for the default value",
-        few_shots = "see [Prompt] section for the default value",
-        chat_input = "See [Prompt Section for default value]",
         stream = true,
         api_key = "GEMINI_API_KEY",
         end_point = "https://generativelanguage.googleapis.com/v1beta/models",
