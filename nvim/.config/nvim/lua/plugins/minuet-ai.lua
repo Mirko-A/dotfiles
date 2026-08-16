@@ -1,29 +1,49 @@
 return {
   "milanglacier/minuet-ai.nvim",
   opts = {
-    -- ////////// Virtual text settings.
+    -- Virtual text configuration.
     virtualtext = {
       auto_trigger_ft = {},
       keymap = {
-        -- accept whole completion
+        -- Accept whole completion.
         accept = "<A-A>",
-        -- accept one line
+        -- Accept one completion line.
         accept_line = "<A-a>",
-        -- accept n lines (prompts for number)
+        -- Accept n completion lines (prompts for number).
         accept_n_lines = "<A-z>",
-        -- Cycle to next completion item, or manually invoke completion
+        -- Cycle to next completion item, or manually invoke completion.
         next = "<A-n>",
-        -- Cycle to prev completion item, or manually invoke completion
+        -- Cycle to prev completion item, or manually invoke completion.
         prev = "<A-p>",
         dismiss = "<A-e>",
       },
     },
-    -- ////////// Local llama.cpp provider settings.
-    provider = "openai_fim_compatible",
+
+    provider = "gemini",
+
+    n_completions = 2,
+    context_window = 16000,
+
     -- Recommended for local model for resource saving.
-    n_completions = 1,
-    context_window = 1024,
+    -- n_completions = 1,
+    -- context_window = 1024,
+
     provider_options = {
+      -- Google Gemini configuration.
+      gemini = {
+        model = "gemini-2.0-flash",
+        system = "see [Prompt] section for the default value",
+        few_shots = "see [Prompt] section for the default value",
+        chat_input = "See [Prompt Section for default value]",
+        stream = true,
+        api_key = "GEMINI_API_KEY",
+        end_point = "https://generativelanguage.googleapis.com/v1beta/models",
+        optional = {},
+        -- A list of functions to transform the endpoint, header, and request body.
+        transform = {},
+      },
+
+      -- Local model configuration.
       openai_fim_compatible = {
         api_key = "TERM",
         name = "llama.cpp",
