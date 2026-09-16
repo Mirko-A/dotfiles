@@ -6,6 +6,9 @@
 vim.opt.colorcolumn = "80"
 vim.o.scrolloff = 12
 
+-- Preserve manually resized splits when opening and closing sidebars.
+vim.o.equalalways = false
+
 -- Indentation
 vim.o.expandtab = true
 vim.o.shiftwidth = 4
