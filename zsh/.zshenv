@@ -7,7 +7,5 @@
 
 [ -d $HOME/go/bin ] && export PATH="$PATH:$HOME/go/bin"
 
-[ -d $HOME/.foundry/bin ] && export PATH="$PATH:$HOME/.foundry/bin"
-
 # secrets (untracked)
 [ -f $HOME/.secrets ] && . "$HOME/.secrets"
